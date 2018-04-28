@@ -1,0 +1,34 @@
+//Свойства width и height включают в себя значения полей и границ, но не отступов (margin)
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 10px;
+}
+
+body {
+  font-family: $ff-main;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+//отменяем маркеры для списка
+ul,
+ol {
+  list-style-type: none;
+}
+
+//для float
+.clearfix {
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

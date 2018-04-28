@@ -1,0 +1,249 @@
+.header {
+  position: relative;
+  background-color: $light-background;
+  margin: 0;
+  padding: 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    padding: 2.6rem 4rem;
+    margin: 0;
+  }
+  &__logo {
+    width: 14.6rem;
+    line-height: 1;
+    margin-left: 4rem;
+    margin-right: 2rem;
+  }
+  &__wrapper-left {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    flex-basis: 50%;
+  }
+  &__wrapper-write {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    flex-basis: 50%;
+  }
+  &__toggle {
+    display: none;
+  }
+  &__comparison {
+    position: relative;
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: $highlighted-fonts-color;
+  }
+  &__ico-list {
+    position: absolute;
+    content: '';
+    width: 1.6rem;
+    height: 1.6rem;
+    top: 50%;
+    left: -3rem;
+    transform: translateY(-50%);
+    background-image: url("../images/icons/ico-list.svg");
+    background-size: cover, 1.6rem 1.6rem;
+  }
+  &__ico-circle {
+    position: absolute;
+    left: -2rem;
+    top: -0.5rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: $highlighted-fonts-color;
+  }
+  &__ico-number {
+    position: absolute;
+    left: -1.5rem;
+    top: -0.4rem;
+    font-family: $ff-additional;
+    font-size: 1rem;
+    color: $light-background;
+  }
+  &__account {
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    color: $main-fonts-color;
+    text-decoration: none;
+    padding: 0.5rem 1.6rem;
+    border: 1px solid $dark-background;
+    border-radius: 10%/50%;
+    margin: 0 2.5rem;
+    &__text {
+      position: relative;
+      margin-right: 2rem;
+      &:before {
+        @include centerer-y();
+        content: '';
+        width: 0;
+        height: 0;
+        right: -2rem;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 8px solid $light-fonts-color;
+
+      }
+    }
+  }
+  &__phone {
+    font-family: $ff-additional;
+    font-size: 1.8rem;
+    color: $bold-fonts-color;
+    margin-right: 1rem;
+  }
+  .btn-phone {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    border: none;
+    &:hover, &:active {
+      &:before {
+        @include centerer-xy();
+        content: '';
+        width: 4.8rem;
+        height: 4.8rem;
+        background: transparent;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: 1px solid $transparent-purple;
+      }
+      &:after {
+        @include centerer-xy();
+        content: '';
+        width: 5.8rem;
+        height: 5.8rem;
+        background: transparent;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: 1px solid $light-transparent-purple;
+      }
+    }
+  }
+  &__phone-circle {
+    @include centerer-xy();
+    width: 3.6rem;
+    height: 3.6rem;
+    background: $highlighted-fonts-color;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  &__ico-telephone {
+    @include centerer-xy();
+    width: 1.8rem;
+    height: 2rem;
+    background-image: url("../images/icons/ico-telephone.svg");
+    background-size: cover, 1.6rem 1.6rem;
+
+  }
+
+
+
+  //&__icon {
+  //  position: absolute;
+  //  width: 3.3rem;
+  //  height: 3.3rem;
+  //  left: 50%;
+  //  transform: translate(-50%, -50%);
+  //  border-radius: 50%;
+  //  background: $transparent-shadow-white;
+  //}
+  //&__icon-anchor {
+  //  @include circle-icon(ico-anchor, 1rem, 1.45rem);
+  //}
+  &__hero {
+    width: 100%;
+    min-height: 23rem;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  &__about {
+    position: absolute;
+    left: 0;
+    top: 13.3rem;
+    padding: 0 2rem;
+    padding-top: 1.5rem;
+    margin: 0;
+    font-family: $ff-additional;
+    font-size: 1.4rem;
+    color: $light-fonts-color;
+    background-color: $light-background;
+    line-height: 1.4rem;
+  }
+  &__title {
+    position: absolute;
+    left: 0;
+    top: 16.2rem;
+    padding: 1rem 2rem;
+    margin: 0;
+    font-family: $ff-additional;
+    font-size: 4.8rem;
+    color: $bold-fonts-color;
+    background-color: $light-background;
+    line-height: 4.8rem;
+  }
+}
+
+// Small devices (landscape phones)
+@media (max-width: 768px) {
+  .header {
+    &__toggle {
+      margin-left: auto;
+      margin-right: 1rem;
+      display: block;
+    }
+  }
+}
+
+
+//.hovicon {
+//  background: rgba(255, 255, 255, 0.1);
+//  -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+//  -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+//  transition: transform ease-out 0.1s, background 0.2s;
+//}
+//.hovicon:after {
+//  top: 0;
+//  left: 0;
+//  padding: 0;
+//  z-index: -1;
+//  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+//  opacity: 0;
+//  -webkit-transform: scale(0.9);
+//  -moz-transform: scale(0.9);
+//  -ms-transform: scale(0.9);
+//  transform: scale(0.9);
+//}
+//.hovicon:hover {
+//  background: rgba(255, 255, 255, 0.05);
+//  -webkit-transform: scale(0.93);
+//  -moz-transform: scale(0.93);
+//  -ms-transform: scale(0.93);
+//  transform: scale(0.93);
+//  color: #fff;
+//}
+//.hovicon:hover i {
+//  color: #fff;
+//}
+//.hovicon:hover:after {
+//  -webkit-animation: sonarEffect 1.3s ease-out 75ms;
+//  -moz-animation: sonarEffect 1.3s ease-out 75ms;
+//  animation: sonarEffect 1.3s ease-out 75ms;
+//}

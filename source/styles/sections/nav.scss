@@ -1,0 +1,53 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 70%;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  margin-right: 3rem;
+  &__link {
+    display: table-cell;
+    margin: 0;
+    padding: .7rem 0;
+    vertical-align: top;
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: $highlighted-fonts-color;
+  }
+  &__link:hover {
+    color: $transparent-shadow-black;
+    border-bottom: 1px solid $transparent-shadow-black;
+  }
+  &__link:active {
+    color: $transparent-shadow-black;
+  }
+}
+
+
+// Small devices (landscape phones)
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    &__link {
+      padding: 0;
+      margin: .5rem auto;
+      font-size: 1rem;
+    }
+    &__link--active::after {
+      display: none;
+    }
+    &.open {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: stretch;
+      flex-direction: column;
+      flex-basis: 100%;
+      margin-top: 1rem;
+    }
+  }
+}

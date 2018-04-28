@@ -1,0 +1,7 @@
+nav.nav
+    - var items = {section_1:'Раздел №1', section_2:'Раздел №2', section_3:'Раздел №3', section_4:'Раздел №4', section_5:'Раздел №5'}
+    each val, index in items
+        if val === 'Раздел №1'
+            a.nav__link(href="#" + index)=val
+        else
+            a.nav__link(href="#" + index)=val
