@@ -1,14 +1,14 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  flex-basis: 70%;
+  //flex-basis: 70%;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
-  margin-right: 3rem;
+  margin-right: auto;
   &__link {
     display: table-cell;
-    margin: 0;
+    margin: 0 1rem;
     padding: .7rem 0;
     vertical-align: top;
     font-family: $ff-main;

@@ -1,0 +1,45 @@
+.events {
+  width: 100%;
+  min-height: 15rem;
+  background-color: $light-light-grey;
+  margin-top: 8rem;
+  .container {
+    padding: 0 15rem;
+  }
+  &__list {
+    min-height: 15rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    flex-basis: 22.5rem;
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &__time {
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    color: $light-fonts-color;
+  }
+  &__news {
+    font-family: $ff-main;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $main-fonts-color;
+    background-color: $light-background;
+    border: 1px solid $light-background;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+  }
+  &__about {
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    color: $main-fonts-color;
+  }
+}
