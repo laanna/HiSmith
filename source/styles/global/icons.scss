@@ -2,24 +2,54 @@
   background: url(../images/icons/ico-facebook.svg) 1.6rem 1.6rem no-repeat;
   background-position: center;
   background-size: cover;
+  transition: 0.3s;
+  &:hover {
+    background: url(../images/icons/ico-facebook-hov.svg) 1.6rem 1.6rem no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 .icon-vkontakte {
   background: url(../images/icons/ico-vk.svg) 2rem 1rem no-repeat;
   background-position: center;
   background-size: cover;
+  transition: 0.3s;
+  &:hover {
+    background: url(../images/icons/ico-vk-hov.svg) 2rem 1rem no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 .icon-instagram {
   background: url(../images/icons/ico-instagram.svg) 1.6rem 1.6rem no-repeat;
   background-position: center;
   background-size: cover;
+  transition: 0.3s;
+  &:hover {
+    background: url(../images/icons/ico-instagram-hov.svg) 1.6rem 1.6rem no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 .icon-odnoklassniki {
   background: url(../images/icons/ico-odnoklassniki.svg) 1rem 2rem no-repeat;
   background-position: center;
   background-size: cover;
+  transition: 0.3s;
+  &:hover {
+    background: url(../images/icons/ico-odnoklassniki-hov.svg) 1rem 2rem no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 .icon-youtube {
   background: url(../images/icons/ico-youtube.svg) 1.8rem 1.3rem no-repeat;
   background-position: center;
   background-size: cover;
+  transition: 0.3s;
+  &:hover {
+    background: url(../images/icons/ico-youtube-hov.svg) 1.8rem 1.3rem no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }

@@ -1,14 +1,17 @@
 .footer {
   position: relative;
   min-height: 25rem;
-  &__wrapper {
-    width: 100%;
-    min-height: 25rem;
+  .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0 15rem;
+  }
+  &__wrapper {
+    width: 22.5rem;
+    min-height: 25rem;
     margin: 0;
     padding: 0;
   }
@@ -20,7 +23,9 @@
     align-content: center;
     align-items: center;
     margin: 0;
-    padding: 0;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    padding: 0 6rem 0 0;
   }
   &__item {
     position: relative;
@@ -29,9 +34,47 @@
   }
   &__title {
     position: absolute;
-    width: 2rem;
-    min-height: 2rem;
+    width: 1.6rem;
+    min-height: 1.6rem;
     background-color: transparent;
+  }
+  .footer-sect {
+    &__title {
+      margin-top: 4rem;
+    }
+    &__list {
+      text-decoration: none;
+      padding: 0;
+    }
+    &__about {
+      font-family: $ff-main;
+      font-size: 1.4rem;
+      color: $highlighted-fonts-color;
+    }
+  }
+  .footer-sect:last-child {
+    margin-top: 6.7rem;
+  }
+  &__phone {
+    font-family: $ff-additional;
+    font-size: 2.4rem;
+    color: $bold-fonts-color;
+    margin: 0;
+    margin-right: 1rem;
+  }
+  &__address {
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    color: $main-fonts-color;
+    margin: 0;
+    padding: 0;
+  }
+  &__mail {
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    color: $highlighted-fonts-color;
+    margin: 0;
+    padding: 0;
   }
 }
 
