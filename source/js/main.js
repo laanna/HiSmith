@@ -41,3 +41,25 @@ function up() {
     } else clearTimeout(t);
     return false;
 }
+
+//Open Story
+var arrows = document.querySelectorAll("[data-toggle]");
+console.log(arrows);
+arrows.forEach(function (arrow) {
+        arrow.addEventListener('click', function (event) {
+            event.preventDefault();
+            var story = arrow.parentNode.parentNode;
+            story.classList.toggle('story--open');
+        });
+});
+
+//Open chapter
+var ticks = document.querySelectorAll('.arrow-bottom-transparent');
+console.log(ticks);
+ticks.forEach(function () {
+    tick.addEventListener('click', function (event) {
+        event.preventDefault();
+        var story = tick.parentNode.parentNode;
+        story.classList.toggle('chapter--open');
+    });
+})

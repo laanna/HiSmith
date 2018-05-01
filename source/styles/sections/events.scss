@@ -1,10 +1,10 @@
 .events {
   width: 100%;
   min-height: 15rem;
-  background-color: $light-light-grey;
+  background-color: $dark-background;
   margin-top: 8rem;
   .container {
-    padding: 0 15rem;
+    padding: 3rem 15rem;
   }
   &__list {
     min-height: 15rem;
@@ -41,5 +41,17 @@
     font-family: $ff-main;
     font-size: 1.4rem;
     color: $main-fonts-color;
+  }
+}
+
+// Small devices (landscape phones)
+@media (max-width: 768px) {
+  .events {
+    .container {
+      padding: 0 4rem;
+    }
+    &__list {
+      justify-content: center;
+    }
   }
 }

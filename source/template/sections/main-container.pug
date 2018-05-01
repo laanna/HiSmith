@@ -1,41 +1,43 @@
 section.main-container
     .container
-        aside.main-container__list
-            ul.main-container__nav
-                li.main-container__item
-                    a.main-container__link(href="#") Документы
-                li.main-container__item
-                    a.main-container__link(href="#") План
-                li.main-container__item
-                    a.main-container__link(href="#") Оплата
-                li.main-container__item
-                    a.main-container__link(href="#") Стадии
-                li.main-container__item
-                    a.main-container__link(href="#") Online
-                li.main-container__item
-                    a.main-container__link(href="#") Инструкция
-                li.main-container__item
-                    a.main-container__link.active(href="#") Уведомления
-            ul.main-container__list-address
-                li.main-container__address-item
-                    h3.main-container__address__title Адрес 123
-                    .container-list-address
-                        p.main-container__address__about Адрес 123
-                        a.main-container__address__link(href="#") Перейти
+        aside.list
+            include dropdown
+            //ul.navigation
+            //    li.navigation__item
+            //        a.navigation__link(href="#") Документы
+            //    li.navigation__item
+            //        a.navigation__link(href="#") План
+            //    li.navigation__item
+            //        a.navigation__link(href="#") Оплата
+            //    li.navigation__item
+            //        a.navigation__link(href="#") Стадии
+            //    li.navigation__item
+            //        a.navigation__link(href="#") Online
+            //    li.navigation__item
+            //        a.navigation__link(href="#") Инструкция
+            //    li.navigation__item
+            //        a.navigation__link.active(href="#") Уведомления
+            ul.list-address
+                li.list-address__item
+                    h3.list-address__title Адрес 123
+                    .list-address__container
+                        p.list-address__about Адрес 123
+                        a.list-address__link(href="#") Перейти
                             span.arrow-right
-                li.main-container__address-item
-                    h3.main-container__address__title Адрес 123
-                    .container-list-address
-                        p.main-container__address__about Адрес 123
-                        a.main-container__address__link(href="#") Перейти
+                .line
+                li.list-address__item
+                    h3.list-address__title Адрес 123
+                    .list-address__container
+                        p.list-address__about Адрес 123
+                        a.list-address__link(href="#") Перейти
                             span.arrow-right
-        main.main-container__main
-            h2.main-container__general-title Уведомления
-            article.main-container__story
-                time.main-container__time(datetime="17-09-22") 22/09/17
-                h3.main-container__title "Вращательный экваториальный момент - актуальная национальная задача"
-                    span.arrow-bottom-top
-                p.main-container__about
+        main.main
+            h2.main__general-title Уведомления
+            article.story
+                time.story__time(datetime="17-09-22") 22/09/17
+                h3.story__title "Вращательный экваториальный момент - актуальная национальная задача"
+                    span.arrow-bottom-top(data-toggle)
+                p.story__about(data-about)
                     | Современная критика выслеживает апогей. Малое колебание амбивалентно. Врожденная
                     | интуиция с учетом региональных факторов, осмысленно несовершенный орогенез.
                     br
@@ -46,11 +48,11 @@ section.main-container
                     | теорем механики.
                     br
                     | Освобождение, несмотря на не менее значительную.
-            article.main-container__story
-                time.main-container__time(datetime="17-09-21") 21/09/17
-                h3.main-container__title "Реальная власть как концепция"
-                    span.arrow-bottom-top
-                p.main-container__about
+            article.story
+                time.story__time(datetime="17-09-21") 21/09/17
+                h3.story__title "Реальная власть как концепция"
+                    span.arrow-bottom-top(data-toggle)
+                p.story__about(data-about)
                     | Современная критика выслеживает апогей. Малое колебание амбивалентно. Врожденная
                     | интуиция с учетом региональных факторов, осмысленно несовершенный орогенез.
                     br
@@ -61,11 +63,11 @@ section.main-container
                     | теорем механики.
                     br
                     | Освобождение, несмотря на не менее значительную.
-            article.main-container__story
-                time.main-container__time(datetime="17-08-11") 11/08/17
-                h3.main-container__title "Из ряда вон выходящий математический маятник: гипотеза и теории"
-                    span.arrow-bottom-top
-                p.main-container__about
+            article.story
+                time.story__time(datetime="17-08-11") 11/08/17
+                h3.story__title "Из ряда вон выходящий математический маятник: гипотеза и теории"
+                    span.arrow-bottom-top(data-toggle)
+                p.story__about(data-about)
                     | Современная критика выслеживает апогей. Малое колебание амбивалентно. Врожденная
                     | интуиция с учетом региональных факторов, осмысленно несовершенный орогенез.
                     br
@@ -76,11 +78,11 @@ section.main-container
                     | теорем механики.
                     br
                     | Освобождение, несмотря на не менее значительную.
-            article.main-container__story
-                time.main-container__time(datetime="17-08-01") 01/08/17
-                h3.main-container__title "Межпланетный знак: методология и особенности"
-                    span.arrow-bottom-top
-                p.main-container__about
+            article.story
+                time.story__time(datetime="17-08-01") 01/08/17
+                h3.story__title "Межпланетный знак: методология и особенности"
+                    span.arrow-bottom-top(data-toggle)
+                p.story__about(data-about)
                     | Современная критика выслеживает апогей. Малое колебание амбивалентно. Врожденная
                     | интуиция с учетом региональных факторов, осмысленно несовершенный орогенез.
                     br
@@ -91,11 +93,11 @@ section.main-container
                     | теорем механики.
                     br
                     | Освобождение, несмотря на не менее значительную.
-            article.main-container__story
-                time.main-container__time(datetime="17-07-24") 24/07/17
-                h3.main-container__title "Юрский маховик: ядро или засветка неба?"
-                    span.arrow-bottom-top
-                p.main-container__about
+            article.story
+                time.story__time(datetime="17-07-24") 24/07/17
+                h3.story__title "Юрский маховик: ядро или засветка неба?"
+                    span.arrow-bottom-top(data-toggle)
+                p.story__about(data-about)
                     | Современная критика выслеживает апогей. Малое колебание амбивалентно. Врожденная
                     | интуиция с учетом региональных факторов, осмысленно несовершенный орогенез.
                     br
