@@ -54,12 +54,12 @@ arrows.forEach(function (arrow) {
 });
 
 //Open chapter
-var ticks = document.querySelectorAll('.arrow-bottom-transparent');
-console.log(ticks);
-ticks.forEach(function () {
-    tick.addEventListener('click', function (event) {
-        event.preventDefault();
-        var story = tick.parentNode.parentNode;
-        story.classList.toggle('chapter--open');
-    });
-})
+// var ticks = document.querySelectorAll('.arrow-bottom-transparent');
+// console.log(ticks);
+// ticks.forEach(function () {
+//     tick.addEventListener('click', function (event) {
+//         event.preventDefault();
+//         var list = tick.parentNode.parentNode;
+//         list.classList.toggle('list--open');
+//     });
+// })

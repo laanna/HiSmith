@@ -99,6 +99,14 @@
 }
 
 
+@media (max-width: 1300px) {
+  .footer {
+    .container {
+      padding: 0 4rem;
+    }
+  }
+}
+
 // Small devices (landscape phones)
 @media (max-width: 768px) {
   .footer {
@@ -106,6 +114,9 @@
       padding: 0 4rem;
     }
     .chapter {
+      flex-basis: 50%;
+    }
+    .wrapper-navigation {
       flex-basis: 50%;
     }
   }

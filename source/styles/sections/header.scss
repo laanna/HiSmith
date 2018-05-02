@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  background-color: $light-background;
+  background-color: $clean-background;
   margin: 0;
   padding: 0;
   .wrapper {
@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 1rem 4rem;
     margin: 0;
   }
   .logo {
@@ -22,10 +22,16 @@
   }
   .comparison {
     position: relative;
-    font-family: $ff-main;
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: $highlighted-fonts-color;
+    margin-left: 3rem;
+    &__link {
+      font-family: $ff-main;
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: $highlighted-fonts-color;
+      &:hover {
+        font-weight: bold;
+      }
+    }
     &__ico-list {
       position: absolute;
       content: '';
@@ -49,9 +55,7 @@
       background-color: $highlighted-fonts-color;
     }
     &__ico-number {
-      position: absolute;
-      left: -1.5rem;
-      top: -0.4rem;
+      @include centerer-xy();
       font-family: $ff-additional;
       font-size: 1rem;
       color: $light-background;
@@ -86,14 +90,13 @@
     font-family: $ff-additional;
     font-size: 1.8rem;
     color: $bold-fonts-color;
-    margin: 0;
-    margin-right: 1rem;
   }
   .btn-phone {
     position: relative;
     width: 6rem;
     height: 6rem;
     border: none;
+    background: transparent;
     &:hover, &:active {
       &:before {
         @include centerer-xy();
@@ -118,6 +121,12 @@
         border: 1px solid $light-transparent-purple;
       }
     }
+    &:active, &:focus {
+      outline: none !important;
+    }
+    &::-moz-focus-inner {
+      border: 0 !important;
+    }
     &__phone-circle {
       @include centerer-xy();
       width: 3.6rem;
@@ -135,6 +144,9 @@
       background-size: cover, 1.6rem 1.6rem;
     }
   }
+  .container {
+    margin: 0 4rem;
+  }
   .hero {
     width: 100%;
     min-height: 23rem;
@@ -151,7 +163,7 @@
       font-family: $ff-additional;
       font-size: 1.4rem;
       color: $light-fonts-color;
-      background-color: $light-background;
+      background-color: $clean-background;
       line-height: 1.4rem;
     }
     &__title {
@@ -163,19 +175,63 @@
       font-family: $ff-additional;
       font-size: 4.8rem;
       color: $bold-fonts-color;
-      background-color: $light-background;
+      background-color: $clean-background;
       line-height: 1;
     }
   }
 }
 
-// Small devices (landscape phones)
-@media (max-width: 768px) {
+
+@media (max-width: 1280px) {
   .header {
+    .logo {
+      margin-right: auto;
+    }
     .toggle {
-      margin-left: auto;
+      margin-left: 4rem;
       margin-right: 1rem;
       display: block;
+    }
+    .comparison {
+      display: none;
+    }
+    .account {
+      display: none;
+    }
+  }
+}
+
+
+// Small devices (landscape phones)
+//@media (max-width: 768px) {
+//  .header {
+//    .logo {
+//      margin-right: auto;
+//    }
+//    .toggle {
+//      margin-left: 4rem;
+//      margin-right: 1rem;
+//      display: block;
+//    }
+//    .comparison {
+//      display: none;
+//    }
+//    .account {
+//      display: none;
+//    }
+//  }
+//}
+
+// Small devices (phones)
+@media (max-width: 640px) {
+  .header {
+    .hero {
+      &__about {
+        display: none;
+      }
+      &__title {
+        display: none;
+      }
     }
   }
 }

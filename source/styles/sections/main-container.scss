@@ -2,7 +2,7 @@
   .container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: flex-start;
     align-items: flex-start;
     padding-top: 5rem;
@@ -92,7 +92,7 @@
     }
   }
   .main {
-    width: 87.4rem;
+    width: 73%;
     padding-left: 4rem;
     border-left: 1px solid $dark-background;
     &__general-title {
@@ -151,6 +151,7 @@
 @media (max-width: 768px) {
   .main-container {
     .container {
+      flex-wrap: wrap;
       margin: 0 4rem;
     }
     .list {
@@ -186,6 +187,7 @@
       }
     }
     .main {
+      width: 100%;
       padding-left: 0;
       border-left: none;
     }

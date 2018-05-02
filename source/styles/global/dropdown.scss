@@ -29,6 +29,8 @@
     width: 80%;
   }
   .dropdown-toggle {
+    position: relative;
+    order: 1;
     width: 80%;
     margin: 1.7rem 0;
     padding: 0.7rem;
@@ -39,15 +41,24 @@
       border: 1px solid $dark-background;
       border-radius: 8%/50%;
       color: $main-fonts-color;
+      .ico-circle {
+        display: block;
+      }
+      .ico-number {
+        display: block;
+      }
     }
   }
   .dropdown-item {
+    position: relative;
     width: 100%;
     margin: 1.7rem 0;
     padding: 0.7rem;
     padding-left: 2rem;
     transition: 0.3s;
     text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 8%/50%;
     &:hover {
       border: 1px solid $dark-background;
       border-radius: 8%/50%;
@@ -56,6 +67,25 @@
   }
   .dropdown-item:last-child {
     margin-bottom: 3rem;
+  }
+  .ico-circle {
+    display: none;
+    position: absolute;
+    left: 95%;
+    top: -0.5rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: $highlighted-fonts-color;
+  }
+  .ico-number {
+    display: none;
+    @include centerer-xy();
+    font-family: $ff-additional;
+    font-size: 1rem;
+    color: $light-background;
   }
 }
 

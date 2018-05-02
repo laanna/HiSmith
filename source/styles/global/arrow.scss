@@ -30,7 +30,8 @@
 }
 
 .arrow-bottom-top {
-  @include centerer-y();
+  position: absolute;
+  top: -2rem;
   right: 0;
   width: 1.8rem;
   height: 1.8rem;
