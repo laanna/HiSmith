@@ -8,14 +8,21 @@ header.header
                 span.comparison__ico-circle
                     .comparison__ico-number 3
                 span.comparison__text-list Сравнение
-        a.account.btn(href="#")
-            span.account__text Личный кабинет
+        .dropdown
+            a.dropdown-toggle(href="#", data-toggle="dropdown") Личный кабинет
+            .dropdown-menu(aria-labelledby="dropdownMenuLink")
+                form.contact-form(action='#')
+                    label.form-text(for='name') Логин
+                    input#name.form-control(type='text' name='name' placeholder='name')
+                    label.form-text(for='password') Пароль
+                    input#password.form-control(type="password" name="psw")
+                    button.button(type='submit') Войти
         p.phone +7 000 000-00-00
-        button.btn-phone.btn(type="submit")
-            span.btn-phone__phone-circle
-                .hovicon
-            span.btn-phone__ico-telephone
-        .toggle.btn-burger
+            button.btn-phone.btn(type="submit")
+                span.btn-phone__phone-circle
+                    .hovicon
+                span.btn-phone__ico-telephone
+        .toggle.btn-burger(data-toggle="main")
             span
             span
             span

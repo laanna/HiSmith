@@ -1,22 +1,19 @@
 // Mobile Navigation
 
-var btnBurger = document.querySelector('.header__toggle');
-var menu = document.querySelector('.nav');
-var navLinks = document.querySelectorAll('.nav__link');
-var t;
-(function () {
+var body = document.querySelector("html");
+var btnBurger = document.querySelector("[data-toggle='main']");
 
+(function () {
     if (btnBurger) {
         btnBurger.addEventListener('click', function (event) {
             event.preventDefault();
+            console.log(btnBurger);
             btnBurger.classList.toggle('open');
-            menu.classList.toggle('open');
+            body.classList.toggle('menu--open');
+
+            var wrapper = btnBurger.parentNode;
+            wrapper.classList.toggle('wrapper--open');
         });
-    }
-    if (navLinks && navLinks.length>0){
-        navLinks.forEach(function (link) {
-            link.addEventListener('click', closeMobileNav)
-        })
     }
 })();
 
@@ -31,35 +28,23 @@ function closeMobileNav() {
     }
 }
 
-//Scroll Up
-
-function up() {
-    var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
-    if(top > 0) {
-        window.scrollBy(0,-100);
-        t = setTimeout('up()',20);
-    } else clearTimeout(t);
-    return false;
-}
 
 //Open Story
-var arrows = document.querySelectorAll("[data-toggle]");
-console.log(arrows);
-arrows.forEach(function (arrow) {
-        arrow.addEventListener('click', function (event) {
+var collapses = document.querySelectorAll("[data-toggle='collapse']");
+collapses.forEach(function (collapse) {
+        collapse.addEventListener('click', function (event) {
             event.preventDefault();
-            var story = arrow.parentNode.parentNode;
+            var story = collapse.parentNode.parentNode;
             story.classList.toggle('story--open');
         });
 });
 
-//Open chapter
-// var ticks = document.querySelectorAll('.arrow-bottom-transparent');
-// console.log(ticks);
-// ticks.forEach(function () {
-//     tick.addEventListener('click', function (event) {
-//         event.preventDefault();
-//         var list = tick.parentNode.parentNode;
-//         list.classList.toggle('list--open');
-//     });
-// })
+
+var dropdowns = document.querySelectorAll("[data-toggle='dropdown']");
+dropdowns.forEach(function (dropdown) {
+    dropdown.addEventListener('click', function (event) {
+        event.preventDefault();
+        var story = dropdown.parentNode;
+        story.classList.toggle('dropdown--open');
+    });
+});

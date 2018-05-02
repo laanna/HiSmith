@@ -1,4 +1,4 @@
-.dropdown-show {
+.dropdown {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -36,10 +36,11 @@
     padding: 0.7rem;
     padding-left: 2rem;
     transition: 0.3s;
+    color: $highlighted-fonts-color;
     text-decoration: none;
     &:hover {
       border: 1px solid $dark-background;
-      border-radius: 8%/50%;
+      border-radius: 100rem;
       color: $main-fonts-color;
       .ico-circle {
         display: block;
@@ -56,12 +57,13 @@
     padding: 0.7rem;
     padding-left: 2rem;
     transition: 0.3s;
+    color: $highlighted-fonts-color;
     text-decoration: none;
     border: 1px solid transparent;
-    border-radius: 8%/50%;
+    border-radius: 100rem;
     &:hover {
       border: 1px solid $dark-background;
-      border-radius: 8%/50%;
+      border-radius: 100rem;
       color: $main-fonts-color;
     }
   }
@@ -91,18 +93,182 @@
 
 // Small devices (landscape phones)
 @media (max-width: 768px) {
-  .dropdown-show {
+  .dropdown {
     margin: 0 1rem 3rem 1rem;
     &:after {
       display: none;
     }
+    &--open {
+      .dropdown-menu {
+        display: none;
+      }
+    }
     .dropdown-menu {
-      display: none;
+      width: 97%;
     }
     .dropdown-toggle {
+      order: 0;
       width: 97%;
       border: 1px solid $dark-background;
-      border-radius: 3%/50%;
+      border-radius: 100rem;
     }
   }
+}
+
+
+
+//Header
+
+.header {
+  .dropdown {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    color: $main-fonts-color;
+    margin: 0 2rem;
+    padding: 0.25rem 1.6rem;
+    &:after {
+      border-bottom: none;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 6rem;
+      background: $clean-background;
+      width: 15rem;
+    }
+    .dropdown-toggle {
+      position: relative;
+      padding: 0.25rem 1.6rem;
+      padding-right: 2rem;
+      border: 1px solid $dark-background;
+      border-radius: 100rem;
+      color: $main-fonts-color;
+      text-decoration: none;
+      transition: 0.3s;
+      &:before {
+        @include centerer-y();
+        content: '';
+        width: 0;
+        height: 0;
+        right: 1rem;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 8px solid $light-fonts-color;
+      }
+    }
+  }
+  .dropdown--open {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+  .contact-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    background-color: $clean-background;
+    box-sizing: border-box;
+    box-shadow: -8px 8px 10px 1px $transparent-shadow;
+    width: 100%;
+  }
+  .form-text {
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    color: $main-fonts-color;
+    margin: 1rem;
+  }
+  .form-control {
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid $highlighted-fonts-color;
+    margin: 1.4rem;
+    font-family: $ff-main;
+    font-size: 1.4rem;
+    color: $main-fonts-color;
+    background-color: $clean-background;
+    resize:none;
+    &:active, &:focus {
+      outline: none !important;
+    }
+    &::-moz-focus-inner {
+      border: 0 !important;
+    }
+  }
+  .button {
+    @include button;
+    width: 80%;
+    margin: 1rem auto;
+    margin-top: 1.4rem;
+    padding: 0.5rem 1.4rem;
+    &:active, &:focus {
+      outline: none !important;
+    }
+    &::-moz-focus-inner {
+      border: 0 !important;
+    }
+  }
+  .wrapper--open {
+    .dropdown {
+      font-size: 2.4rem;
+      color: $highlighted-fonts-color;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .dropdown-menu {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30rem;
+      border-right: 1px solid $dark-background;
+      border-top: 1px solid $dark-background;
+    }
+    .dropdown-toggle {
+      position: relative;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      color: $highlighted-fonts-color;
+      text-decoration: none;
+      transition: 0.3s;
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+
+  //// Small devices (landscape phones)
+  //@media (max-width: 768px) {
+  //  .dropdown {
+  //    margin: 0 1rem 3rem 1rem;
+  //    &:after {
+  //      display: none;
+  //    }
+  //    &--open {
+  //      .dropdown-menu {
+  //        display: none;
+  //      }
+  //    }
+  //    .dropdown-menu {
+  //      width: 97%;
+  //    }
+  //    .dropdown-toggle {
+  //      order: 0;
+  //      width: 97%;
+  //      border: 1px solid $dark-background;
+  //      border-radius: 100rem;
+  //    }
+  //  }
+  //}
 }

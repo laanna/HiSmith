@@ -16,6 +16,10 @@ body {
   overflow-y: auto;
 }
 
+.menu--open {
+  overflow: hidden;
+}
+
 
 //отменяем маркеры для списка
 ul,

@@ -11,6 +11,73 @@
     align-items: center;
     padding: 1rem 4rem;
     margin: 0;
+    &--open {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      position: fixed; /* Stay in place */
+      z-index: 100; /* Sit on top */
+      left: 0;
+      top: 0;
+      background-color: #fff;
+      overflow-x: hidden; /* Disable horizontal scroll */
+      transition: 0.5s;
+      .nav {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        margin-bottom: auto;
+        &__link {
+          font-size: 2.4rem;
+        }
+      }
+      .comparison {
+        display: block;
+        width: 100%;
+        margin-left: 8rem;
+        &__link {
+          font-size: 2.4rem;
+        }
+        &__ico-list {
+          width: 2.6rem;
+          height: 2.6rem;
+          top: 50%;
+          left: -4rem;
+          transform: translateY(-50%);
+          background-image: url("../images/icons/ico-list.svg");
+          background-size: cover, 2.6rem 2.6rem;
+        }
+        &__ico-circle {
+          left: -2.7rem;
+          top: -1rem;
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+        &__ico-number {
+          font-size: 1.6rem;
+        }
+      }
+      .dropdown {
+        display: block;
+        margin-top: 2rem;
+      }
+      .toggle {
+        position: fixed;
+        top: 1.5rem;
+        right: 3rem;
+      }
+      .phone {
+        width: 100%;
+        padding-left: 6rem;
+        font-size: 4rem;
+      }
+      .btn-phone {
+        top: 0;
+        left: 45rem;
+        transform: scale(1.2);
+      }
+    }
   }
   .logo {
     width: 14.6rem;
@@ -61,43 +128,22 @@
       color: $light-background;
     }
   }
-  .account {
-    font-family: $ff-main;
-    font-size: 1.4rem;
-    color: $main-fonts-color;
-    text-decoration: none;
-    padding: 0.25rem 1.6rem;
-    border: 1px solid $dark-background;
-    border-radius: 8%/50%;
-    margin: 0 2rem;
-    &__text {
-      position: relative;
-      margin-right: 2rem;
-      &:before {
-        @include centerer-y();
-        content: '';
-        width: 0;
-        height: 0;
-        right: -2rem;
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
-        border-top: 8px solid $light-fonts-color;
-
-      }
-    }
-  }
   .phone {
+    position: relative;
     font-family: $ff-additional;
     font-size: 1.8rem;
     color: $bold-fonts-color;
+    margin-right: 4rem;
+    padding-right: 3rem;
   }
   .btn-phone {
-    position: relative;
+    @include centerer-y();
+    left: 16rem;
     width: 6rem;
     height: 6rem;
     border: none;
     background: transparent;
-    &:hover, &:active {
+    &:hover {
       &:before {
         @include centerer-xy();
         content: '';
@@ -182,7 +228,7 @@
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1307px) {
   .header {
     .logo {
       margin-right: auto;
@@ -195,32 +241,12 @@
     .comparison {
       display: none;
     }
-    .account {
+    .dropdown {
       display: none;
     }
   }
 }
 
-
-// Small devices (landscape phones)
-//@media (max-width: 768px) {
-//  .header {
-//    .logo {
-//      margin-right: auto;
-//    }
-//    .toggle {
-//      margin-left: 4rem;
-//      margin-right: 1rem;
-//      display: block;
-//    }
-//    .comparison {
-//      display: none;
-//    }
-//    .account {
-//      display: none;
-//    }
-//  }
-//}
 
 // Small devices (phones)
 @media (max-width: 640px) {
@@ -231,6 +257,36 @@
       }
       &__title {
         display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 555px) {
+  .header {
+    .phone {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 495px) {
+  .header {
+    .phone {
+      display: none;
+    }
+    .wrapper {
+      &--open {
+        .phone {
+          width: 100%;
+          padding-left: 6rem;
+          font-size: 2.4rem;
+        }
+        .btn-phone {
+          top: -40%;
+          left: 27rem;
+          transform: scale(1);
+        }
       }
     }
   }
