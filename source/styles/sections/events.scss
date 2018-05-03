@@ -62,7 +62,7 @@
 @media (max-width: 1307px) {
   .events {
     .container {
-      padding: 0 4rem;
+      padding: 3rem 4rem;
     }
     &__list {
       flex-wrap: nowrap;
@@ -74,20 +74,24 @@
 }
 
 // Small devices (landscape phones)
-//@media (max-width: 768px) {
-//  .events {
-//    .container {
-//      padding: 0 4rem;
-//    }
-//    &__list {
-//      justify-content: center;
-//    }
-//  }
-//}
+@media (max-width: 768px) {
+  .events {
+    .container {
+      padding: 3rem 4rem;
+    }
+    &__list {
+      justify-content: center;
+    }
+  }
+}
 
 // Small devices (phones)
 @media (max-width: 640px) {
   .events {
+    .container {
+      padding: 3rem 0;
+      margin: 0;
+    }
     &__item {
       display: none;
       flex-basis: 100%;

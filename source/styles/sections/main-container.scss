@@ -193,3 +193,25 @@
     }
   }
 }
+
+@media (max-width: 555px) {
+  .main-container {
+    .list-address {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      &__item {
+        flex-basis: 100%;
+      }
+      &__item:nth-child(2n-1) {
+        border-bottom: 1px solid $dark-background;
+      }
+      .line {
+        display: none;
+      }
+    }
+  }
+}

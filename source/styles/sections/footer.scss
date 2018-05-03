@@ -125,8 +125,8 @@
 // Small devices (phones)
 @media (max-width: 640px) {
   .footer {
-    .wrapper-location {
-
+    .container {
+      padding: 0;
     }
     .wrapper-navigation {
       flex-basis: 100%;

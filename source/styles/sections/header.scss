@@ -262,15 +262,7 @@
   }
 }
 
-@media (min-width: 555px) {
-  .header {
-    .phone {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: 495px) {
+@media (max-width: 555px) {
   .header {
     .phone {
       display: none;
@@ -278,6 +270,7 @@
     .wrapper {
       &--open {
         .phone {
+          display: block;
           width: 100%;
           padding-left: 6rem;
           font-size: 2.4rem;
@@ -288,6 +281,33 @@
           transform: scale(1);
         }
       }
+    }
+  }
+}
+
+@media (max-width: 495px) {
+  .header {
+    .wrapper {
+      &--open {
+        .phone {
+          width: 100%;
+          padding-left: 6rem;
+          //font-size: 2.4rem;
+        }
+        .btn-phone {
+          top: -40%;
+          left: 27rem;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .header {
+    .wrapper {
+      padding: 1rem 0.5rem;
     }
   }
 }
