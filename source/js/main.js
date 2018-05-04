@@ -18,7 +18,6 @@ var btnBurger = document.querySelector("[data-toggle='main']");
 })();
 
 
-
 function closeMobileNav() {
     if (btnBurger && btnBurger.classList.contains('open')) {
         btnBurger.classList.remove('open');
@@ -32,11 +31,11 @@ function closeMobileNav() {
 //Open Story
 var collapses = document.querySelectorAll("[data-toggle='collapse']");
 collapses.forEach(function (collapse) {
-        collapse.addEventListener('click', function (event) {
-            event.preventDefault();
-            var story = collapse.parentNode.parentNode;
-            story.classList.toggle('story--open');
-        });
+    collapse.addEventListener('click', function (event) {
+        event.preventDefault();
+        var story = collapse.parentNode.parentNode;
+        story.classList.toggle('story--open');
+    });
 });
 
 
