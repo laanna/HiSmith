@@ -45,4 +45,4 @@
     npm start
     ```    
     
-[demo]: https://laanna.github.io/bino-html-template/
+[demo]: https://laanna.github.io/hismith/
